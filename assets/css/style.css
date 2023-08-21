@@ -2,14 +2,15 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-
 }
 
 body {
     color: rgb(143, 238, 255);
     background: rgb(0, 53, 122);
     background: radial-gradient(circle, rgb(1, 41, 94) 0%, rgb(0, 1, 49) 100%);  
-    font-family: 'Montserrat', sans-serif;  
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;  
+    height: auto;
 }
 
 h2 {
@@ -21,22 +22,62 @@ h2 {
     padding-bottom: 80px;
 }
 
+@media screen and (max-width: 770px) {
+    body {
+        width: 650px;
+        margin-left: 200px;
+    }
+
+    .initials {
+        width: 0;
+    }
+    
+    footer {
+        flex-wrap: wrap;
+    }
+
+    .contact-me-title {
+        margin-bottom: 15px;
+    }
+
+    .how-to-contact {
+        padding-left: 200px;
+    }
+
+    .card-content {
+        width: 650px;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+       
+    .caption {
+       text-align: center;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    footer {
+        flex-wrap: wrap;
+    }
+}
+
 /*header*/
 header {
     margin-bottom: 70px;
+    font-size: 20px;
+    padding: 15px 0;
     display: flex;
-    justify-content: space-between;
-    height: 80px;
-    width: auto;
-    border-bottom: solid 5px rgba(128, 128, 128, 0.377);
-    font-size: 20px; 
+    justify-content: space-between;     
 }
 
 .initials {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-left: 70px;
+}
+
+.js-symbol {
+    margin-left: 70px;
 }
 
 nav {
@@ -78,7 +119,6 @@ nav a:hover {
 /*Greeting + photo*/
 .intro-container {
     padding: 70px 0;    
-    width: 100%;
     display: flex;
     justify-content: space-around;
 }
@@ -212,17 +252,23 @@ nav a:hover {
     padding: 10px;
 }
 
+.card-content {
+    background-color: rgba(159, 197, 247, 0.164);
+    border-radius: 10px;
+    margin-bottom: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .card-content img {
     height: 180px;
     width: auto;
     border-radius: 30px;
-    flex: 0 0 300px;
     margin: 40px;
 }
 
 .caption {
-    width: fit-content;
-    margin-right: 40px;
     width: 300px;
     height: auto;
     font-size: 20px;
@@ -243,22 +289,12 @@ nav a:hover {
     background-color: rgb(4, 32, 68);     
 }
 
-.card-content {
-    background-color: rgba(159, 197, 247, 0.164);
-    border-radius: 10px;
-    margin-bottom: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 /*Contact*/
 
 footer {
-    border-top: solid 5px rgba(128, 128, 128, 0.377);
     display: flex;
     justify-content: space-around;
-    height: 100px;
+    padding: 15px 0;
 }
 
 .contact-me-title {
@@ -276,7 +312,7 @@ footer {
 
 .how-to-contact {
     text-align: center;
-    margin-right: 200px;
+    padding-right: 200px;
 }
 
 .contact-info h3 {
